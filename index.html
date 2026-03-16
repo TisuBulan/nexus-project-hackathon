@@ -1096,7 +1096,7 @@ Berikan reasoning_steps minimal 4 langkah dan action_items minimal 3 item. Respo
     // Extract text from all content blocks
     const fullText = (data.content || [])
       .map(b => b.type === 'text' ? b.text : '')
-      .join('\n').trim();
+      .join('').trim();
 
     // Parse JSON — strip possible markdown fences
     const cleaned = fullText.replace(/^```json\s*/i, '').replace(/```\s*$/, '').trim();
